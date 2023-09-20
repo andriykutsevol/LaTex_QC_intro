@@ -1,0 +1,130 @@
+
+
+%-----------------------------------------
+
+\newtheorem{definition}{Definition}
+
+
+%-----------------------------------------
+% \bigbreak
+\newcommand{\skl}
+    {
+    \vskip 0.2in %1cm
+    }
+
+
+%-----------------------------------------
+
+% https://tex.stackexchange.com/questions/14071/how-can-i-increase-the-line-spacing-in-a-matrix
+% Here's a redefinition of an internal amsmath LaTeX macro for customizing line spacing in specific matrices arbitrarily as desired:
+
+\makeatletter
+\renewcommand*\env@matrix[1][\arraystretch]{%
+  \edef\arraystretch{#1}%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols c}}
+\makeatother
+
+
+
+%--------------------------------------------
+% Set noindent for entire file
+%https://tex.stackexchange.com/questions/27802/set-noindent-for-entire-file
+\setlength\parindent{0pt}
+%--------------------------------------------
+
+\newcommand{\vkd}{\ket{d}}
+\newcommand{\vbd}{\bra{d}}
+
+\newcommand{\vku}{\ket{u}}
+\newcommand{\vbu}{\bra{u}}
+
+\newcommand{\vko}{\ket{o}}
+\newcommand{\vbo}{\bra{o}}
+
+\newcommand{\vki}{\ket{i}}
+\newcommand{\vbi}{\bra{i}}
+
+\newcommand{\vkl}{\ket{l}}
+\newcommand{\vbl}{\bra{l}}
+
+\newcommand{\vkr}{\ket{r}}
+\newcommand{\vbr}{\bra{r}}
+
+% This works.
+\newcommand{\beq}{\begin{equation}\begin{gathered}}
+\newcommand{\beqn}{\begin{equation}\begin{gathered} \nonumber }
+\newcommand{\eeq}{\end{gathered}\end{equation}}
+
+
+% This works.
+%\newcommand{\beq}{\begin{equation}\begin{aligned}}
+%\newcommand{\beqn}{\begin{equation}\begin{aligned} \nonumber }
+%\newcommand{\eeq}{\end{aligned}\end{equation}}
+
+% This works.
+\newcommand{\beql}[2]{
+\begin{equation}\label{#2}\begin{aligned}
+#1
+\end{aligned}\end{equation}
+}
+% Usage example
+%\beql{
+%&\ket{\psi} = -\frac{4}{5}i\ket{0} + \frac{3}{5}\ket{1} \\
+%&\ket{\phi} = \frac{\ket{0}}{\sqrt{2}} + \frac{\ket{1}}{\sqrt{2}}
+%}{asdfz}
+%(\ref{asdfz})
+
+
+% This works.
+\newcommand{\beqnl}[1]{
+\begin{equation}\begin{aligned}\nonumber
+#1
+\end{aligned}\end{equation}
+}
+
+
+
+%\newcommand{\beq}{\begin{equation}\begin{align*}}
+%\newcommand{\beqn}{\begin{equation}\begin{align*} \nonumber }
+%\newcommand{\eeq}{\end{align*}\end{equation}}
+
+
+%\newcommand{\beql}{\begin{equation}\begin{flalign}}
+%\newcommand{\beqnl}{\begin{equation}\begin{flalign} \nonumber }
+%\newcommand{\eeql}{\end{flalign}\end{equation}}
+
+
+
+%\newcommand{\beq}{\begin{flalign}}
+%\newcommand{\beqn}{\begin{flalign} \nonumber }
+%\newcommand{\eeq}{\end{flalign}}
+
+
+
+%\begin{flalign}
+%f(u) & =\sum_{j=1}^{n} x_jf(u_j)&\\
+%     & =\sum_{j=1}^{n} x_j \sum_{i=1}^{m} a_{ij}v_i&\\
+%     & =\sum_{j=1}^{n} \sum_{i=1}^{m} a_{ij}x_jv_i
+%\end{flalign}
+
+%--------------------------------------------
+
+%\renewcommand*{\arraystretch}{1}
+%\setlength{\arraycolsep}{5pt}
+
+%\makeatletter
+%\renewcommand*\env@matrix[1][\arraystretch]{%
+%  \edef\arraystretch{#1}%
+%  \hskip -\arraycolsep
+%  \let\@ifnextchar\new@ifnextchar
+%  \array{*\c@MaxMatrixCols c}}
+%\makeatother
+
+
+%--------------------------------------------
+
+\newcommand{\mycomment}[1]{}
+
+%--------------------------------------------
